@@ -1,4 +1,4 @@
-barras_no_frescas = int(input("Introduzca el número de barras de pan no frescas"))
+barras_no_frescas = int(input("Introduce el número de barras de pan no frescas"))
 descuento = 0.60
 precio = 3.49
 coste = barras_no_frescas * precio * (1 - descuento)
