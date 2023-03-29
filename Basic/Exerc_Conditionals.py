@@ -96,3 +96,128 @@ else:
     group = "B"
 
 print("Tu grupo es "+ group)
+
+
+
+"""
+EJERCICIO 7: Los tramos impositivos para la declaración de la renta en un determinado país son los siguientes:
+
+Renta	           Tipo impositivo
+Menos de 10000€	        5%
+Entre 10000€ y 20000€	15%
+Entre 20000€ y 35000€	20%
+Entre 35000€ y 60000€	30%
+Más de 60000€	        45%
+
+Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla lo que tiene que pagar. """
+
+renta =float(input("¿Cuál es su renta anual?: "))
+
+if renta < 10000:
+    tipo = 5
+elif renta < 20000:
+    tip = 15
+elif renta < 35000:
+    tipo = 20
+elif renta < 60000:
+    tipo = 30
+else:
+    tipo = 45
+
+print("Tienes que pagar", renta * tipo / 100, "€")
+
+
+
+
+"""
+EJERCICIO 8: En una determinada empresa, sus empleados son evaluados al final de cada año. 
+Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en 
+mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4. o 0.6,pero no valores 
+intermedios entre las cifras mencionadas. A continuación se muestra una tabla con los niveles correspondientes 
+a cada puntuación. La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada 
+por la puntuación del nivel.
+
+Nivel	Puntuación
+Inaceptable	0.0
+Aceptable	0.4
+Meritorio	0.6
+
+Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la 
+cantidad de dinero que recibirá el usuario """
+
+bonificación = 2400
+inaceptable = 0.0
+aceptable = 0.4
+meritorio = 0.6
+
+puntos = float(input("Introduce su puntación: "))
+if puntos == inaceptable:
+    nivel = "Inaceptable"
+elif puntos == aceptable:
+    nivel = "Aceptable"
+elif puntos >= 0.6:
+    nivel = "Meritorio"
+else:
+    nivel = " "
+
+if nivel == " ":
+    print("Esta puntuación no es válida")
+else:
+    print("Tu nivel de rendimiento es %s" % nivel) # también puedes poner {}.format(nivel)
+    print("Te corresponde cobrar %.2f€" % (puntos * bonificación))  # devuelve un número decimal con dos decimales
+
+
+
+"""
+EJERCICIO 9: Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere 
+calcular de forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar 
+al usuario la edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar
+gratis, si tiene entre 4 y 18 años debe pagar 5€ y si es mayor de 18 años, 10€. 
+"""
+
+age = int(input("Introduce su edad: "))
+
+if age < 4:
+    entrada = "gratis"
+elif age > 4 and age < 18:
+    entrada = 5
+else:
+    entrada = 10
+
+print("El precio de la entrada es", entrada, "€")
+
+
+"""
+EJERCICIO 10: La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. 
+Los ingredientes para cada tipo de pizza aparecen a continuación.
+
+Ingredientes vegetarianos: Pimiento y tofu.
+Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+
+Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su 
+respuesta le muestre un menú con los ingredientes disponibles para que elija. Solo se puede eligir un 
+ingrediente además de la mozzarella y el tomate que están en todas la pizzas. Al final se debe mostrar por 
+pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que lleva.
+"""
+
+print("Bienvenido a la pizzería Bella Napoli. \nTipos de pizza: \n\t1 Pizza vegetariana \n\t2 Pizza no vegetariana")
+tipo= input("Elige el número correspondiente al tipo de pizza que desee: ")
+
+if tipo == "1":
+    print("Ingredientes de pizzas vegetarianas: \n\t1 Pimineto \n\t2 Tofu")
+    ingrediente= input("Introduce el ingrediente que quiera: ")
+    print("Pizza vegetariana con mozarella, tomate y ", end="")
+    if ingrediente == "1":
+        print("pimiento")
+    else:
+        print("tofu")
+else:
+    print("Ingrediente de pizzas no vegerarianas: \n\t1 Peperoni \n\t2 Jamón \n\t3 Salmón")
+    ingrediente= input("Introduce el ingrediente que quiera: ")
+    print("Pizza no vegetariana con mozarella, tomate y ", end="")
+    if ingrediente =="1":
+        print("peperoni")
+    elif ingrediente =="2":
+        print("jamón")
+    else:
+        print("salmón")
