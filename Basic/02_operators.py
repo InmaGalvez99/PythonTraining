@@ -3,10 +3,10 @@
 print (3 + 4)
 print (3 - 4 )
 print (3 * 4 )
-print (3 / 4 )
-print (10 % 2 )
-print (10 // 3)
-print (2 ** 3)
+print (3 / 4 ) # división: devuelve un decimal (float)
+print (10 % 2 ) # módulo: retorna el resto de la división
+print (10 // 3) # división de entero: descarte la parte fraccinal
+print (2 ** 3) # potencia
 
 print("Hola" + "Python")
 print("hola" + str(5) )
