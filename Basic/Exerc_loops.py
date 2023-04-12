@@ -116,3 +116,55 @@ password = ""
 while password != key:
     password = input("Introduce la contraseña: ")
 print("Contraseña correcta")
+
+
+"""
+EJERCICIO 10: Escribir un programa que pida al usuario un número entero positivo mayor que 2 y muestre por 
+pantalla si es un número primo o no. """
+
+n = int(input("Introduce un número entero positivo y mayor que 2: "))
+i = 2
+while n % i != 0:
+    i += 1
+if i == n:
+    print(str(n) + "es primo")
+else:
+    print(str(n) + "no es primo")
+
+
+
+"""
+EJERCICIO 11: Escribir un programa que pida al usuario una palabra y luego muestre por pantalla una a una 
+las letras de la palabra introducida empezando por la última. """
+
+word = input("Introduce una palabra: ")
+for element in range(len(word)-1, -1, -1):
+    print(word[element])
+
+
+
+"""
+EJERCICIO 12: Escribir un programa en el que se pregunte al usuario por una frase y una letra, y muestre 
+por pantalla el número de veces que aparece la letra en la frase. """
+
+my_sentence = input("Introduce una frase: ")
+my_letter = input("Introduce una letra: ")
+contador = 0
+for element in my_sentence:
+    if element == my_letter:
+       contador += 1
+print ("La letra {} aparece {} veces en la frase {}".format(my_letter,contador,my_sentence))
+# print(f"La letra {my_letter} aparece {contador} veces en la frase {my_sentence}") otra manera de formateo
+# print ("La letra '%s' aparece %2i veces en la frase '%s'. " % (my_letter,contador,my_sentence)) otra forma
+
+
+"""
+EJERCICIO 13: Escribir un programa que muestre el eco de todo lo que el usuario introduzca hasta que 
+el usuario escriba “salir” que terminará. """
+
+while True:
+    frase = input("Introduce algo: ")
+    if frase == "salir":
+        print("se rompió")
+        break
+    print(frase)
