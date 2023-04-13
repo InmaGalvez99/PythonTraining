@@ -14,7 +14,7 @@ donde <asignatura> es cada una de las asignaturas de la lista. """
 
 subjects = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
 for subject in subjects:
-    print("yo estudio" + subject)
+    print("yo estudio " + subject)
 
 
 
@@ -77,3 +77,77 @@ for subject in subjects:
 for subject in passed:
     subjects.remove(subject)
 print("Tienes que repetir " + str(subjects))
+
+
+
+"""
+EJERCICIO 7: Escribir un programa que almacene el abecedario en una lista, elimine de la lista las letras que 
+ocupen posiciones múltiplos de 3, y muestre por pantalla la lista resultante. """
+
+alphabet = ["a","b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "ñ", "o", "p", "q", "r", "s", "t", "u", "v", "w", "y", "z"]
+for  i in range(len(alphabet), 0, -1):
+    if i % 3 == 0:
+        alphabet.pop(i-1)
+print(alphabet)
+
+
+
+"""
+EJERCICIO 8: Escribir un programa que pida al usuario una palabra y muestre por pantalla si es un palíndromo. """
+
+word = input("introduce una palabra: ")
+reverse_word = word
+word = list(word)
+reverse_word = list(reverse_word)
+reverse_word.reverse()
+
+if word == reverse_word:
+    print("Es un palíndromo")
+else:
+    print("No es un palíndromo")
+
+
+
+"""
+EJERCICIO 9: Escribir un programa que pida al usuario una palabra y muestre por pantalla el número de veces 
+que contiene cada vocal. """
+
+word = input("Introduce una palabra: ")
+vocals = ["a", "e", "i", "o", "u"]
+
+for vocal in vocals:
+    times = 0
+    for letter in word:
+        if letter == vocal:
+            times += 1
+    print("la vocal " + vocal + "aparece " + str(times) + " veces" )
+
+
+
+"""
+EJERCICIO 10: Escribir un programa que almacene en una lista los siguientes precios, 50, 75, 46, 22, 80, 65, 
+8, y muestre por pantalla el menor y el mayor de los precios. """
+
+prices = [50, 75, 46, 22, 80, 65, 8]
+max = min = prices[0]  #posición cero
+for price in prices:
+    if price < min:
+        min = price
+    elif price > max:
+        max = price
+print("El precio mínimo es " + str(min))
+print ("El precio máximo es " + str(max))
+
+
+
+"""
+EJERCICIO 11: Escribir un programa que almacene los vectores (1,2,3) y (-1,0,2) en dos tuplas y muestre por 
+pantalla su producto escalar. """
+
+a = (1, 2, 3)
+b = (-1, 0, 2)
+resultado = 0
+for i in range(len(a)):
+    resultado += a[i] * b[i]
+print("El producto de los vectores " + str(a) + " y" + str(b) + " es " + str(resultado))
+
