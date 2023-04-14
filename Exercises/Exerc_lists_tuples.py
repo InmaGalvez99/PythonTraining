@@ -151,3 +151,37 @@ for i in range(len(a)):
     resultado += a[i] * b[i]
 print("El producto de los vectores " + str(a) + " y" + str(b) + " es " + str(resultado))
 
+
+
+"""
+EJERCICIO 12: Escribir un programa que almacene las matrices
+ 
+A = [1,2,3] y B= [-1,0]
+    [4,5,6]      [0, 1]
+                 [1, 1]
+
+en una lista y muestre por pantalla su producto.
+Nota: Para representar matrices mediante listas usar listas anidadas, representando cada vector fila en una 
+lista. """
+
+ # 2x3  3x2 obtendremos una matriz 2x2
+
+A = ((1, 2, 3),
+     (4, 5, 6))
+
+B = ((-1, 0),
+     (0, 1),
+     (1, 1,))
+
+result = [[0, 0],
+          [0, 0]]
+
+for i in range(len(A)):
+    for j in range(len(B[0])):
+        for k in range(len(B)):
+            result[i][j] += A[i][k] * B[k][j]
+
+for t in range(len(result)):
+    result[t]= tuple(result[t])
+    print(result[t])
+
