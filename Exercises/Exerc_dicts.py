@@ -66,3 +66,21 @@ for asignatura, crédito in asignaturas.items():
     print(asignatura, "tiene", crédito, "créditos")
     total_créditos += crédito
 print("número total de créditos de curso", total_créditos)
+
+
+
+"""
+EJERCICIO 6: Escribir un programa que cree un diccionario vacío y lo vaya llenado con información sobre 
+una persona (por ejemplo nombre, edad, sexo, teléfono, correo electrónico, etc.) que se le pida al usuario. 
+Cada vez que se añada un nuevo dato debe imprimirse el contenido del diccionario."""
+
+persona = {}
+continuar = True
+while continuar:
+    clave = input("¿Qué dato quieres añadir?")
+    valor = input(clave + ": ")
+    persona[clave] = valor
+    print(persona)
+    continuar = input("¿Quieres añadir más información (Si/No) ") == "Si"
+
+
