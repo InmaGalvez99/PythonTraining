@@ -234,4 +234,12 @@ datos_cliente = "nif;nombre;email;teléfono;descuento\n01234567L;Luis González;
 lista_clientes = datos_cliente.split("\n")
 directorio ={}
 lista_campos = lista_clientes[0].split(";")
-# continuar
+for i in lista_clientes[1:]:
+    cliente = {}
+    lista_info= i.split(";")
+    for j in range(len(lista_campos)):
+        if lista_campos[j] == "descuento":
+            lista_info[j] = float(lista_info[j])
+            cliente[lista_campos[j]] = lista_info[j]
+    directorio[lista_info[0]] = cliente
+print(directorio)
