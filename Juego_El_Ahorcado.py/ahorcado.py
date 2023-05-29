@@ -54,8 +54,8 @@ def ahorcado():
     # Llegamos aquí cuando se adivinan todas las letras de la palabra o el jugador se queda sin vidas.
     if vidas == 0:
         print(vidas_visual[vidas])
-        print(f"¡Ahorcado! Has perdido. La palabra era: {palabra}")
+        print(f"¡AHORCADO! Has perdido. La palabra era: {palabra}")
     else:
-        print(f"¡Has adivinado la palabra {palabra}!")
+        print(f"¡ENHORABUENA! ¡Has adivinado la palabra {palabra}!")
 
 ahorcado()
